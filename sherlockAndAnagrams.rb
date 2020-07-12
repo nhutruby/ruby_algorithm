@@ -14,5 +14,5 @@ def sherlockAndAnagrams(str)
   puts counter
   counter.values.map { |n| n * (n - 1) / 2 }.reduce(:+)
 end
-p sherlockAndAnagrams('kkkk')
+p sherlockAndAnagrams('kkkkaaaaa')
 
