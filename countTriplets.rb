@@ -6,6 +6,10 @@ def countTriplets2(arr, r)
     count += v3[k]
     v3[k*r] += v2[k]
     v2[k*r] += 1
+    p k
+    p v3[k]
+    p k*r
+    p '....'
   end
   p v2
   p v3
