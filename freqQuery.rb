@@ -1,8 +1,6 @@
 def freqQuery(queries)
   freq = Hash.new(0)
-
   cnt = Hash.new(0)
-
   arr = []
 
   queries.each { |q|
