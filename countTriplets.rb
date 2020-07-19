@@ -29,3 +29,4 @@ def countTriplets(arr, r)
   r
 end
 p countTriplets2([1,5,5,25,44, 125],5)
+
