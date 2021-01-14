@@ -1,6 +1,11 @@
-require 'tempfile'
-f = Tempfile.new('tingtong')
-f.puts "Hello"
-puts f.path
-f.close
+class Foo
+  def initialize
+    @a = 42
+  end
 
+  attr_accessor :a
+end
+
+Foo.new.a = "str"
+
+p Foo.new.a #=> Integer | String
