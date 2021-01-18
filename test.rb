@@ -1,11 +1,13 @@
-class Foo
-  def initialize
-    @a = 42
+class FileSaveError < StandardError
+  attr_accessor :reason
+  def initialize(reason)
+    @reason = reason
   end
-
-  attr_accessor :a
+  def show
+    p @reason
+  end
 end
+a = FileSaveError.new('abc')
+a.reason = 'a'
+p a.reason
 
-Foo.new.a = "str"
-
-p Foo.new.a #=> Integer | String
