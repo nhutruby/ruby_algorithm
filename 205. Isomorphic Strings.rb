@@ -10,6 +10,3 @@ def is_isomorphic(s, t)
   end
   true
 end
-0.upto(10) do |i|
-  p i
-end
