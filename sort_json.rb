@@ -4,9 +4,12 @@
 require 'json'
 filename = 'text.json'
 dirname = File.dirname(filename)
+p dirname
 `split -b 1024m #{filename} #{filename}.parts.`
 Dir.chdir(dirname)
+puts Dir.pwd
 parts = Dir["#{filename}.parts.*"]
+
 json = ''
 parts.each do |part|
   json += File.read(part)
@@ -35,4 +38,4 @@ arr_name.each do |i|
   i['books'].sort_by! { |h| h['title'] }
 end
 arr_name.sort_by! { |h| h['name'] }
-p arr_name
+
