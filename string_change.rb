@@ -3,7 +3,7 @@
 def string_change(arr)
   r = []
   arr.each do |str|
-    r << "#{str.gsub(/[$]/, '').upcase}"
+    r << str.gsub(/[$]/, '').upcase
   end
   r.join(' ')
 end
