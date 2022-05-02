@@ -4,4 +4,7 @@ def rotationLeft(a, d)
   p d
   p a[d..n-1] + a[0..d-1]
 end
-rotationLeft([1, 2, 3, 4, 5], 2)
+def r(a,k)
+  a.rotate!(-k)
+end
+p r( [-1,-100,3,99],2)
