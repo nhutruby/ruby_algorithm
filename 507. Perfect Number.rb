@@ -1,0 +1,31 @@
+=begin
+A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. A divisor of an integer x is an integer that can divide x evenly.
+
+Given an integer n, return true if n is a perfect number, otherwise return false.
+
+
+
+Example 1:
+
+Input: num = 28
+Output: true
+Explanation: 28 = 1 + 2 + 4 + 7 + 14
+1, 2, 4, 7, and 14 are all divisors of 28.
+Example 2:
+
+Input: num = 7
+Output: false
+=end
+# @param {Integer} num
+# @return {Boolean}
+def check_perfect_number(num)
+  primes = [2,3,5,7,13,17,19,31]
+  primes.each do |i|
+    return true if pn(i) == num
+  end
+  return false
+end
+def pn(p)
+  r = 2**(p - 1)*(2**p - 1)
+  return r
+end
