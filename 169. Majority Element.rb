@@ -23,4 +23,5 @@ def majority_element2(nums)
   item
 
 end
-p majority_element([3,2,3])
+p majority_element2([3,2,3])
+p majority_element2([1,2,3,3,3,3,5,5,5,5,5])
