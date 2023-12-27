@@ -31,4 +31,24 @@ def f(xs)
     end
   end
 end
-p f(names)
+# f(names)
+def file_naming(names)
+  uniq = []
+  names.each do |name|
+    if !uniq.include?(name)
+      uniq << name
+    else
+      k = 1
+      loop do
+        if uniq.include?("#{name}(#{k})")
+          k += 1
+        else
+          uniq << "#{name}(#{k})"
+          break
+        end
+      end
+    end
+  end
+  uniq
+end
+p file_naming(names)
